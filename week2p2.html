@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="week2p2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+           <div class="logomedium">
+            <img src="data:image/png;base64,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" alt="logo Medium">
+           </div> 
+           <div class="search">
+            <i class="fas fa-search"></i>
+            <i class="far fa-bookmark"></i>
+            <i class="far fa-bell"></i>
+            <input type="text" class="far input-search" placeholder="Resume Membership">
+            <i class="fas fa-user-circle login"></i>
+           </div>
+        </div>      
+
+
+        <div class="box-area">
+            <div class="leftside">
+                <div class="recommanded">
+                    <p class="following">FOLLOWING</p>
+                    <p>RECOMMENDED FOR YOU</p>
+                </div>
+
+                <div class="article">
+
+                    <div class="description">
+
+                        <div class="author">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+
+                        <div class="title">
+                            <p>Titolo articolo </p>
+                        </div>
+
+                        <div class="summary">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti quod nihil recusandae a impedit omnis sit voluptatum possimus repudiandae in totam nulla, dolorem veniam, soluta quae doloremque nobis. Repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum non, rerum cupiditate id doloremque nam repudiandae quasi blanditiis unde, nemo labore illo reiciendis similique vel, sapiente tempore atque fuga corporis?</p>
+                        </div>
+
+                        <div class="options">
+                            <div class="info">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                    <li>About</li>
+                                    <li>Popular</li>
+                                </ul>
+                            </div>
+                            <div class="save">
+                                <i class="far fa-bookmark"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo">
+                        <img src="https://picsum.photos/100/70" alt="random">
+                    </div>
+
+                </div>
+                
+                <div class="article">
+
+                    <div class="description">
+
+                        <div class="author">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+
+                        <div class="title">
+                            <p>Titolo articolo </p>
+                        </div>
+
+                        <div class="summary">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti quod nihil recusandae a impedit omnis sit voluptatum possimus repudiandae in totam nulla, dolorem veniam, soluta quae doloremque nobis. Repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum non, rerum cupiditate id doloremque nam repudiandae quasi blanditiis unde, nemo labore illo reiciendis similique vel, sapiente tempore atque fuga corporis?</p>
+                        </div>
+
+                        <div class="options">
+                            <div class="info">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                    <li>About</li>
+                                    <li>Popular</li>
+                                </ul>
+                            </div>
+                            <div class="save">
+                                <i class="far fa-bookmark"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo">
+                        <img src="https://picsum.photos/100/70" alt="random">
+                    </div>
+
+                </div>
+
+                <div class="article">
+
+                    <div class="description">
+
+                        <div class="author">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+
+                        <div class="title">
+                            <p>Titolo articolo </p>
+                        </div>
+
+                        <div class="summary">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti quod nihil recusandae a impedit omnis sit voluptatum possimus repudiandae in totam nulla, dolorem veniam, soluta quae doloremque nobis. Repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum non, rerum cupiditate id doloremque nam repudiandae quasi blanditiis unde, nemo labore illo reiciendis similique vel, sapiente tempore atque fuga corporis?</p>
+                        </div>
+
+                        <div class="options">
+                            <div class="info">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                    <li>About</li>
+                                    <li>Popular</li>
+                                </ul>
+                            </div>
+                            <div class="save">
+                                <i class="far fa-bookmark"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo">
+                        <img src="https://picsum.photos/100/70" alt="random">
+                    </div>
+
+                </div>
+                
+                <div class="article">
+
+                    <div class="description">
+
+                        <div class="author">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+
+                        <div class="title">
+                            <p>Titolo articolo </p>
+                        </div>
+
+                        <div class="summary">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti quod nihil recusandae a impedit omnis sit voluptatum possimus repudiandae in totam nulla, dolorem veniam, soluta quae doloremque nobis. Repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum non, rerum cupiditate id doloremque nam repudiandae quasi blanditiis unde, nemo labore illo reiciendis similique vel, sapiente tempore atque fuga corporis?</p>
+                        </div>
+
+                        <div class="options">
+                            <div class="info">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                    <li>About</li>
+                                    <li>Popular</li>
+                                </ul>
+                            </div>
+                            <div class="save">
+                                <i class="far fa-bookmark"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo">
+                        <img src="https://picsum.photos/100/70" alt="random">
+                    </div>
+
+                </div>
+
+                <div class="article">
+
+                    <div class="description">
+
+                        <div class="author">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+
+                        <div class="title">
+                            <p>Titolo articolo </p>
+                        </div>
+
+                        <div class="summary">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti quod nihil recusandae a impedit omnis sit voluptatum possimus repudiandae in totam nulla, dolorem veniam, soluta quae doloremque nobis. Repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum non, rerum cupiditate id doloremque nam repudiandae quasi blanditiis unde, nemo labore illo reiciendis similique vel, sapiente tempore atque fuga corporis?</p>
+                        </div>
+
+                        <div class="options">
+                            <div class="info">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                    <li>About</li>
+                                    <li>Popular</li>
+                                </ul>
+                            </div>
+                            <div class="save">
+                                <i class="far fa-bookmark"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo">
+                        <img src="https://picsum.photos/100/70" alt="random">
+                    </div>
+
+                </div>
+
+                <div class="article">
+
+                    <div class="description">
+
+                        <div class="author">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+
+                        <div class="title">
+                            <p>Titolo articolo </p>
+                        </div>
+
+                        <div class="summary">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti quod nihil recusandae a impedit omnis sit voluptatum possimus repudiandae in totam nulla, dolorem veniam, soluta quae doloremque nobis. Repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum non, rerum cupiditate id doloremque nam repudiandae quasi blanditiis unde, nemo labore illo reiciendis similique vel, sapiente tempore atque fuga corporis?</p>
+                        </div>
+
+                        <div class="options">
+                            <div class="info">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                    <li>About</li>
+                                    <li>Popular</li>
+                                </ul>
+                            </div>
+                            <div class="save">
+                                <i class="far fa-bookmark"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo">
+                        <img src="https://picsum.photos/100/70" alt="random">
+                    </div>
+
+                </div>
+
+                <div class="article">
+
+                    <div class="description">
+
+                        <div class="author">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+
+                        <div class="title">
+                            <p>Titolo articolo </p>
+                        </div>
+
+                        <div class="summary">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, corrupti quod nihil recusandae a impedit omnis sit voluptatum possimus repudiandae in totam nulla, dolorem veniam, soluta quae doloremque nobis. Repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum non, rerum cupiditate id doloremque nam repudiandae quasi blanditiis unde, nemo labore illo reiciendis similique vel, sapiente tempore atque fuga corporis?</p>
+                        </div>
+
+                        <div class="options">
+                            <div class="info">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                    <li>About</li>
+                                    <li>Popular</li>
+                                </ul>
+                            </div>
+                            <div class="save">
+                                <i class="far fa-bookmark"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo">
+                        <img src="https://picsum.photos/100/70" alt="random">
+                    </div>
+
+                </div>
+
+
+            </div>
+    
+            <div class="rightside">
+                <div class="first">
+                    <div class="firstlogos">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAB8CAMAAACcwCSMAAAAaVBMVEX///8AAAD09PTw8PD5+fnS0tLe3t7j4+Pp6en8/PzIyMhISEiKiop2dnaxsbHPz88rKysPDw8mJia4uLiXl5efn589PT3Y2NhdXV2RkZFmZmZ8fHweHh6EhIQUFBRtbW1UVFQ0NDSoqKhR557FAAAC90lEQVRoge2a2baqMAyGiyCDOACKigNbfP+H3AxSW+hE2Zpz1sp3R1fKD2mahhZCEARBEARBEARB/lciL/T90Iu+retv17FDiddb/0vC3u6eOCOS9c7cBbXHXBvpMD+OlTuOudEdwyJO0rI67xcTpd3iJpNuuBVaea94P+x+knauUm4pn+o7hJzf7ubSp0yrXZOoYu80MD6PLNxrLupYCLUEHKTawcj2MrDw6klUjPqFZ1Pt+o6SkY8ErlvzJu3ABoN+vjTGRcTD7h1Xke2Ke/FWZhAKQTpFuw77UKC9EpqW0cik4jw3HistY3WvEluyjr93Taw3gnK6eDZSPxg856vl+m5ZxLJuKh4er+0KcvJQyn+1xO9uPzba3OM3KBIUffXtq+FGA/Zpp+04XPaMKrkhndjrvqUf9NBW23HYoBWHesexX2Lo+D6HDdNhk+dFZdi/KG346a739trslImUdi+tBW04tteyyWlGTBOI+h2qzu9L2nDj4s8SGnN3td1q8IRpEy7ejBFvePSvrlmNu4WQSUMnTYwasey0XY1Zl1WYRbtxxYR1VMzGLGzTNh0y2awer0BZsZmQhHz2kNF4KHq8r7ezw61hr5/lLzESMTXDwaCPno3ZhG0izmOKhnphmO312u8m8dbVcgvmejOqNa1oillfa5UNxC/zUmvP3mzGDvwTG3wjGJCb5UnCF2uVuNqcyoYoKqg3Lj84GXlITSfw0Gf2Bp9dV+qalkirrincrMRTMrFYl0AkXws8dYrbcb3+RNtQfPdPiYO6HTTgQKcaaJIBTa+gCwvokgpaTMCWUaAFJGjpDPrRAPu5BPqhODfk6O6AzSfy3M2BXlsz6Il4cwB0WwR2Qwh2Kwx0ExB2+xN24xd0y9tms7+ctdm/4zpCHnPAHvDAHm2RCYd6wiPBFttDPQJ7nFmTa+PuYwe5RHuEnX3yCJuoD++fRof3QRFnpc3hfYPst4Xl539b6OB+2Ei/+MMGBepXFQRBEARBEARBEGB+AVC6OLYIxaUSAAAAAElFTkSuQmCC" alt="half logo Medium">
+                        <i class="fas fa-plus"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="discover">
+                        <p>Discover Medium writers you already follow on Twitter</p>
+                    </div>
+                    <div class="connect">
+                        <i class="fab fa-twitter"></i>
+                        <p>Connect to Twitter</p>
+                    </div>
+                    <div class="maybe">
+                        <a href="https://www.google.it">Maybe Later</a>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="rectopics">
+                        <p>Recommanded topics</p>
+                    </div>
+                    <div class="topics">
+                        <p>Tecnology</p>
+                        <p>Money</p>
+                        <p>Business</p>
+                        <p>Productivity</p>
+                        <p>Psycology</p>
+                        <p>Mindfulness</p>
+                        <p>Art</p>
+                    </div> 
+                </div>
+                <div class="third">
+                    <div class="whoto">
+                        <p>Who to follow</p>
+                    </div>
+                    <div class="people">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="profile">
+                            <p class="name">Lessig</p>
+                            <p>Law professor, activist</p>
+                        </div>
+                        <div class="follow">
+                            <p>Follow</p>
+                        </div>
+                    </div>
+                    <div class="people">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="profile">
+                            <p class="name">Lessig</p>
+                            <p>Law professor, activist</p>
+                        </div>
+                        <div class="follow">
+                            <p>Follow</p>
+                        </div>
+                    </div>
+                    <div class="people">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="profile">
+                            <p class="name">Lessig</p>
+                            <p>Law professor, activist</p>
+                        </div>
+                        <div class="follow">
+                            <p>Follow</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="fourth">
+                    <div class="more">
+                        <p>Recently saved</p>
+                    </div>
+                    <div class="article2">
+                        <div class="author2">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+                        <div class="title2">
+                            <p>TITOLO ARTICOLO</p>
+                        </div>
+                        <div class="options2">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                </ul>
+                        </div>  
+                    </div>   
+                    <div class="article2">
+                        <div class="author2">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Nome autore</p>
+                        </div>
+                        <div class="title2">
+                            <p>TITOLO ARTICOLO</p>
+                        </div>
+                        <div class="options2">
+                                <ul>
+                                    <li>Data</li>
+                                    <li>Readingtime</li>
+                                </ul>
+                        </div>  
+                    </div>
+                    <div class="seeall">
+                        <a href="https://www.google.it">See all (3)</a>
+                    </div>   
+                </div>
+
+                <div class="fifth">
+                    <div class="help1">
+                        <p>Help</p>
+                        <p>Status</p>
+                        <p>Writers</p>
+                        <p>Blog</p>
+                        <p>Careers</p>
+                    </div>
+                    <div class="help2">
+                        <p>Privacy</p>
+                        <p>Terms</p>
+                        <p>About</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>

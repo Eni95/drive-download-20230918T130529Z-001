@@ -1,0 +1,448 @@
+div.container {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    padding: 20px 50px;
+}
+
+div.container div {
+    display: flex;
+}
+
+div.navbar {
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    height: 40px;
+    width: auto;
+
+    background-color: white;
+    opacity: 1;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+} 
+
+i.far, .fas  {
+    margin: 0 10px;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+i.login {
+    font-size: 25px;
+}
+
+input.input-search {
+    padding: 7px;
+    margin: 0 10px;
+    border-radius:20px;
+    border-color: black;
+}
+
+input.input-search::placeholder {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+div.leftside {
+    width: 70%;
+    min-height: 900px;
+    border-right: 0.5px solid grey;
+    flex-direction: column;
+}
+
+div.rightside {
+    width: 30%;
+    min-height: 900px;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+div.rightside div {
+    flex-wrap: wrap;
+   
+}
+
+p.following {
+    color: grey;
+}
+
+.recommanded p {
+    margin: 5px;
+    padding: 10px;
+}
+
+div.recommanded {
+    font-size: 10px;
+    font-weight: 800;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+div.first {  
+    margin: 0;
+    width: 100%;
+    height: auto;
+    align-content: flex-start;
+    justify-content: center;
+    /* border-bottom: 0.5px solid grey;
+    border-bottom-width: 80%; */
+}
+
+div.firstlogos {
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+div.firstlogos img {
+    height: 30px;
+    width: auto;
+}
+
+i.fa-plus, .fa-twitter {
+    padding: 5px;
+    font-size: 20px;
+}
+
+div.discover p {
+    text-align: center;
+    white-space: pre-line;
+    padding: 0 40px;
+    font-size: 13px;
+}
+
+div.discover {
+    justify-content: center;
+}
+
+div.connect p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+div.connect {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1px 15px;
+}
+
+div.maybe {
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 0;
+}
+
+div.maybe a {
+    font-size: 13px;
+}
+
+div.rectopics{
+    width: 100%;
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+div.rectopics p {
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0;
+
+}
+
+div.whoto p {
+    text-align: left;
+    padding: 0;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+div.whoto {
+    height: 40px;
+}
+
+div.topics p {
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 0 30px;
+    font-size: 11px;
+    line-height: 30px;
+    margin: 7px 7px;
+}
+
+div.topics {
+    flex-wrap: wrap;
+    /* align-content: left; */
+}
+
+div.second {
+    margin: 20px 30px;
+}
+
+div.third {
+    margin: 20px 30px;
+    flex-direction: column;
+    height: auto;
+}
+
+.people i {
+    font-size: 45px;
+    /* padding: 17px 0 0px 0; */
+}
+
+i.fa-user-circle {
+    margin-left: 0;
+}
+
+.people {
+    /* margin-top: 10px; */
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+div.follow p {
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 30px;
+    /* margin: 10px 7px; */
+}
+
+div.profile {
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+}
+
+div.profile p {
+    padding: 0;
+    margin: 0 0 0 10px;
+    justify-content: left;
+    font-size: 11px;
+    font-weight: 100;
+}
+
+div.profile .name {
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.seeall {
+    font-size: 11px;
+}
+
+div.article {
+    padding: 15px;
+}
+
+div.description {
+    width: 70%;
+}
+
+div.photo {
+    /* width: 150;
+    height: 70; */
+    width: 30%;
+    object-fit: cover;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+div.description {
+    flex-direction: column;
+    padding: 10px;
+}
+
+div.author  {
+    height: 15px;
+    align-content: center;
+    justify-content: left;
+    margin: 5px 0;
+}
+
+div.author i {
+    font-size: 15px;
+    margin: 0 10px;
+    padding: 0;
+    margin: 0 10px 0 0;
+}
+
+div.author p {
+    font-size: 10px;
+    margin: 0;
+}
+
+div.title p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+div.title {
+    height: 40px;
+    margin: 0;
+    align-items: center;
+}
+
+div.summary p {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.summary {
+    height: 35px;
+}
+
+div.info ul {
+    display: flex;
+    /* list-style: none; */
+    font-size: 11px;
+   
+}
+
+div.info li {   
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+div.info ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+div.info li:first-child {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+div.info li:nth-child(3) {
+    background-color: lightgray;
+    border-radius: 20px;
+
+
+}
+
+div.options {
+    justify-content: space-between;
+    margin: 0;
+    /* height: 20px; */
+}
+
+div.save i {
+    padding: 0;
+}
+
+div.fourth {
+    flex-direction: column;
+    margin: 20px 30px;
+}
+
+div.more p {
+    text-align: left;
+    padding: 0;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+div.more {
+    height: 40px;
+    margin-top: 20px;
+}
+
+div.article2 {
+    flex-direction: column;
+    padding: 10px 10px 10px 0;
+}
+
+div.author2  {
+    height: 15px;
+    align-content: center;
+    justify-content: left;
+    margin: 5px 0;
+}
+
+div.author2 i {
+    font-size: 15px;
+    margin: 0 10px;
+    padding: 0;
+    margin: 0 10px 0 0;
+}
+
+div.author2 p {
+    font-size: 10px;
+    margin: 0;
+}
+
+div.options2 ul {
+    display: flex;
+    font-size: 11px;
+    padding-left: 0;
+    margin: 5px 0;
+   
+}
+
+div.options2 li {   
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+div.options2 li:first-child {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+div.title2 p {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.title2 {
+    height: 25px;
+    margin: 0;
+    align-items: center;
+}
+
+div.fifth {
+    margin: 20px 30px;
+    justify-content: left;
+}
+
+div.help1 p {
+    font-size: 11px;
+    margin: 5px 20px;
+}
+
+.help1 p:first-child {
+    margin-left: 0;
+}
+
+div.help2 p {
+    font-size: 11px;
+    margin: 5px 20px;
+}
+
+.help2 p:first-child {
+    margin-left: 0;
+}
